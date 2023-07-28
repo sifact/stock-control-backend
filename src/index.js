@@ -6,10 +6,9 @@ import userRoute from "./routes/user.route.js";
 import productRoute from "./routes/product.route.js";
 import authRoute from "./routes/auth.route.js";
 import salesRoutes from "./routes/sales.route.js";
+
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import OverallStat from "./models/OverallStat.js";
-import { dataOverallStat } from "./data/index.js";
 
 dotenv.config();
 const app = express();
@@ -34,7 +33,8 @@ const connect = async () => {
 // middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://control-stock.netlify.app",
     credentials: true,
   })
 );
