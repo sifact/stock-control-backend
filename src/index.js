@@ -6,6 +6,7 @@ import userRoute from "./routes/user.route.js";
 import productRoute from "./routes/product.route.js";
 import authRoute from "./routes/auth.route.js";
 import salesRoutes from "./routes/sales.route.js";
+import categoryRoutes from "./routes/category.route.js";
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -48,6 +49,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/sales", salesRoutes);
+app.use("/api/category", categoryRoutes);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
